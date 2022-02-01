@@ -38,9 +38,3 @@ Cenario: Criar usuario sem informar o email
     E preencher todos os campos exceto o campo email
     Quando clicar em Criar
     Então deve ser apresentada a mensagem     Email translation missing: pt-BR.activerecord.errors.models.user.attributes.email.invalid
- 
-Cenario: Criar usuário através da sessão de lista de usuários
-    Dado que eu esteja na tela de lista de usuários
-    E clique na opção NOVO USUÁRIO
-    Quando finalizar o cadastro preenchendo todos os campos
-    Então deve ser apresentada a mensagem "Usuário Criado com sucesso"
