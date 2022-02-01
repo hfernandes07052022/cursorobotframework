@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.8.0 on win32)" generated="20220131 19:50:31.643" rpa="false" schemaversion="2">
+<suite id="s1" name="Webautomation" source="C:\Users\User\Desktop\Curso Robot basico\tests\features\webautomation.robot">
+<kw name="Abrir navegador" library="hooks" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${CONFIG.WEB.BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<msg timestamp="20220131 19:50:31.838" level="FAIL">Resolving variable '${CONFIG.WEB.BROWSER_NAME}' failed: Variable '${CONFIG}' not found.</msg>
+<status status="FAIL" starttime="20220131 19:50:31.836" endtime="20220131 19:50:31.838"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${CONFIG.WEB.BASE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" starttime="20220131 19:50:31.838" endtime="20220131 19:50:31.839"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220131 19:50:31.839" endtime="20220131 19:50:31.839"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${CONFIG.WEB.IMPLICITY_WAIT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" starttime="20220131 19:50:31.839" endtime="20220131 19:50:31.839"/>
+</kw>
+<status status="FAIL" starttime="20220131 19:50:31.836" endtime="20220131 19:50:31.839"/>
+</kw>
+<test id="s1-t1" name="Cenario: Criar usuário com sucesso usando BDD">
+<tag>BDD</tag>
+<status status="FAIL" starttime="20220131 19:50:31.839" endtime="20220131 19:50:31.840">Parent suite setup failed:
+Resolving variable '${CONFIG.WEB.BROWSER_NAME}' failed: Variable '${CONFIG}' not found.</status>
+</test>
+<kw name="Fechar navegador" library="hooks" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220131 19:50:31.844" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20220131 19:50:31.843" endtime="20220131 19:50:31.844"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220131 19:50:31.844" endtime="20220131 19:50:31.844"/>
+</kw>
+<status status="PASS" starttime="20220131 19:50:31.843" endtime="20220131 19:50:31.845"/>
+</kw>
+<doc>Aqui estarão presentes todos os testes automatizados do módulo de automação WEB.</doc>
+<status status="FAIL" starttime="20220131 19:50:31.645" endtime="20220131 19:50:31.845">Suite setup failed:
+Resolving variable '${CONFIG.WEB.BROWSER_NAME}' failed: Variable '${CONFIG}' not found.</status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">BDD</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Webautomation">Webautomation</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220131 19:50:31.832" level="ERROR">Error in file 'C:\Users\User\Desktop\Curso Robot basico\src\config\package.robot' on line 19: Invalid resource file extension '.yaml'. Supported extensions are '.resource', '.robot', '.txt', '.tsv', '.rst' and '.rest'.</msg>
+</errors>
+</robot>
