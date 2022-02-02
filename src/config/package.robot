@@ -2,6 +2,7 @@
 Documentation        Este será o nosso gerenciador de dependências.
 
 Library              SeleniumLibrary
+Library              RequestsLibrary
 
 
 ###########################
@@ -16,4 +17,3 @@ Resource        ../auto/keywords/kws_web.robot
 ###########################
 
 Resource        hooks.robot
-Resource        hooks.yaml
