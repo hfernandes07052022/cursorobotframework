@@ -1,200 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.8.0 on win32)" generated="20220214 19:43:45.195" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1 (Python 3.8.0 on win32)" generated="20220214 20:13:41.546" rpa="false" schemaversion="2">
 <suite id="s1" name="Webautomation" source="C:\Users\User\Desktop\cursorobotframework\tests\features\webautomation.robot">
 <kw name="Abrir navegador" library="hooks" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${CONFIG.WEB.BROWSER_NAME}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220214 19:43:45.975" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220214 19:43:45.974" endtime="20220214 19:43:50.356"/>
+<msg timestamp="20220214 20:13:41.897" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220214 20:13:41.896" endtime="20220214 20:13:43.462"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${CONFIG.WEB.BASE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220214 19:43:50.359" level="INFO">Opening url 'https://automacaocombatista.herokuapp.com/users/new'</msg>
-<status status="PASS" starttime="20220214 19:43:50.356" endtime="20220214 19:43:56.440"/>
+<msg timestamp="20220214 20:13:43.464" level="INFO">Opening url 'https://automacaocombatista.herokuapp.com/users/new'</msg>
+<status status="PASS" starttime="20220214 20:13:43.463" endtime="20220214 20:13:46.053"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220214 19:43:56.440" endtime="20220214 19:43:56.458"/>
+<status status="PASS" starttime="20220214 20:13:46.053" endtime="20220214 20:13:46.063"/>
 </kw>
 <kw name="Set Selenium Timeout" library="SeleniumLibrary">
 <arg>${CONFIG.WEB.IMPLICITY_WAIT}</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" starttime="20220214 19:43:56.458" endtime="20220214 19:43:56.461"/>
+<status status="PASS" starttime="20220214 20:13:46.064" endtime="20220214 20:13:46.066"/>
 </kw>
-<status status="PASS" starttime="20220214 19:43:45.973" endtime="20220214 19:43:56.461"/>
+<status status="PASS" starttime="20220214 20:13:41.895" endtime="20220214 20:13:46.066"/>
 </kw>
 <test id="s1-t1" name="Cenario: Criar usuário com sucesso usando BDD">
 <kw name="Dado que o cliente esteja na tela de cadastro" library="kws_web">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Automação com Batista</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220214 19:43:56.471" level="INFO">Page title is 'Automação com Batista'.</msg>
-<status status="PASS" starttime="20220214 19:43:56.463" endtime="20220214 19:43:56.471"/>
+<msg timestamp="20220214 20:13:46.078" level="INFO">Page title is 'Automação com Batista'.</msg>
+<status status="PASS" starttime="20220214 20:13:46.068" endtime="20220214 20:13:46.078"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//*[contains(text(), 'Novo Usuário!!')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220214 19:43:56.472" endtime="20220214 19:43:56.518"/>
+<status status="PASS" starttime="20220214 20:13:46.078" endtime="20220214 20:13:46.123"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220214 19:43:56.792" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-41.png"&gt;&lt;img src="selenium-screenshot-41.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220214 19:43:56.519" endtime="20220214 19:43:56.792"/>
+<msg timestamp="20220214 20:13:46.305" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220214 20:13:46.123" endtime="20220214 20:13:46.305"/>
 </kw>
-<status status="PASS" starttime="20220214 19:43:56.462" endtime="20220214 19:43:56.792"/>
+<status status="PASS" starttime="20220214 20:13:46.068" endtime="20220214 20:13:46.305"/>
 </kw>
 <kw name="E preencher todos os campos" library="kws_web">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=user_name</arg>
+<arg>${CADASTRO_PAGE.INPUT_USERNAME}</arg>
 <arg>${DATA.REGISTER.NOME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220214 19:43:56.795" level="INFO">Typing text 'Helder' into text field 'id=user_name'.</msg>
-<status status="PASS" starttime="20220214 19:43:56.794" endtime="20220214 19:43:56.957"/>
+<msg timestamp="20220214 20:13:46.310" level="INFO">Typing text 'Helder' into text field 'user_name'.</msg>
+<status status="PASS" starttime="20220214 20:13:46.307" endtime="20220214 20:13:46.456"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=user_lastname</arg>
+<arg>${CADASTRO_PAGE.INPUT_LASTNAME}</arg>
 <arg>${DATA.REGISTER.ULT_NOME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220214 19:43:56.958" level="INFO">Typing text 'Fernandes' into text field 'id=user_lastname'.</msg>
-<status status="PASS" starttime="20220214 19:43:56.957" endtime="20220214 19:43:57.141"/>
+<msg timestamp="20220214 20:13:46.459" level="INFO">Typing text 'Fernandes' into text field 'user_lastname'.</msg>
+<status status="PASS" starttime="20220214 20:13:46.456" endtime="20220214 20:13:46.608"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=user_email</arg>
+<arg>${CADASTRO_PAGE.INPUT_EMAIL}</arg>
 <arg>${DATA.REGISTER.EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220214 19:43:57.142" level="INFO">Typing text 'helder.teste@robot.com' into text field 'id=user_email'.</msg>
-<status status="PASS" starttime="20220214 19:43:57.141" endtime="20220214 19:43:57.334"/>
+<msg timestamp="20220214 20:13:46.610" level="INFO">Typing text 'helder.teste@robot.com' into text field 'user_email'.</msg>
+<status status="PASS" starttime="20220214 20:13:46.608" endtime="20220214 20:13:46.776"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=user_address</arg>
+<arg>${CADASTRO_PAGE.INPUT_ADDRESS}</arg>
 <arg>${DATA.REGISTER.ENDERECO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220214 19:43:57.336" level="INFO">Typing text 'Rua aprendendo automação' into text field 'id=user_address'.</msg>
-<status status="PASS" starttime="20220214 19:43:57.335" endtime="20220214 19:43:57.543"/>
+<msg timestamp="20220214 20:13:46.778" level="INFO">Typing text 'Rua aprendendo automação' into text field 'user_address'.</msg>
+<status status="PASS" starttime="20220214 20:13:46.777" endtime="20220214 20:13:46.943"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220214 19:43:58.215" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-42.png"&gt;&lt;img src="selenium-screenshot-42.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220214 19:43:57.543" endtime="20220214 19:43:58.215"/>
+<msg timestamp="20220214 20:13:47.193" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220214 20:13:46.943" endtime="20220214 20:13:47.193"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=user_university</arg>
+<arg>${CADASTRO_PAGE.INPUT_UNIVERSITY}</arg>
 <arg>${DATA.REGISTER.UNIVERSIDADE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220214 19:43:58.216" level="INFO">Typing text 'FATEC' into text field 'id=user_university'.</msg>
-<status status="PASS" starttime="20220214 19:43:58.215" endtime="20220214 19:43:58.374"/>
+<msg timestamp="20220214 20:13:47.194" level="INFO">Typing text 'FATEC' into text field 'user_university'.</msg>
+<status status="PASS" starttime="20220214 20:13:47.193" endtime="20220214 20:13:47.329"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=user_profile</arg>
+<arg>${CADASTRO_PAGE.INPUT_PROFILE}</arg>
 <arg>${DATA.REGISTER.PROFISSAO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220214 19:43:58.376" level="INFO">Typing text 'Tech Lead' into text field 'id=user_profile'.</msg>
-<status status="PASS" starttime="20220214 19:43:58.375" endtime="20220214 19:43:58.535"/>
+<msg timestamp="20220214 20:13:47.330" level="INFO">Typing text 'Tech Lead' into text field 'user_profile'.</msg>
+<status status="PASS" starttime="20220214 20:13:47.329" endtime="20220214 20:13:47.477"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=user_gender</arg>
+<arg>${CADASTRO_PAGE.INPUT_GENDER}</arg>
 <arg>${DATA.REGISTER.GENERO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220214 19:43:58.537" level="INFO">Typing text 'Masculino' into text field 'id=user_gender'.</msg>
-<status status="PASS" starttime="20220214 19:43:58.535" endtime="20220214 19:43:58.710"/>
+<msg timestamp="20220214 20:13:47.479" level="INFO">Typing text 'Masculino' into text field 'user_gender'.</msg>
+<status status="PASS" starttime="20220214 20:13:47.477" endtime="20220214 20:13:47.619"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=user_age</arg>
+<arg>${CADASTRO_PAGE.INPUT_AGE}</arg>
 <arg>${DATA.REGISTER.IDADE}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220214 19:43:58.712" level="INFO">Typing text '37' into text field 'id=user_age'.</msg>
-<status status="PASS" starttime="20220214 19:43:58.710" endtime="20220214 19:43:58.877"/>
+<msg timestamp="20220214 20:13:47.622" level="INFO">Typing text '37' into text field 'user_age'.</msg>
+<status status="PASS" starttime="20220214 20:13:47.620" endtime="20220214 20:13:47.753"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220214 19:43:59.170" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-43.png"&gt;&lt;img src="selenium-screenshot-43.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220214 19:43:58.877" endtime="20220214 19:43:59.170"/>
+<msg timestamp="20220214 20:13:48.008" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220214 20:13:47.753" endtime="20220214 20:13:48.009"/>
 </kw>
-<status status="PASS" starttime="20220214 19:43:56.793" endtime="20220214 19:43:59.170"/>
+<status status="PASS" starttime="20220214 20:13:46.306" endtime="20220214 20:13:48.009"/>
 </kw>
 <kw name="Quando clicar em Criar" library="kws_web">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//input[@value='Criar']</arg>
+<arg>${CADASTRO_PAGE.BTN_CRIAR}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220214 19:43:59.172" level="INFO">Clicking element 'xpath=//input[@value='Criar']'.</msg>
-<status status="PASS" starttime="20220214 19:43:59.172" endtime="20220214 19:44:01.638"/>
+<msg timestamp="20220214 20:13:48.011" level="INFO">Clicking element '//input[@value='Criar']'.</msg>
+<status status="PASS" starttime="20220214 20:13:48.010" endtime="20220214 20:13:49.177"/>
 </kw>
-<status status="PASS" starttime="20220214 19:43:59.171" endtime="20220214 19:44:01.638"/>
+<status status="PASS" starttime="20220214 20:13:48.010" endtime="20220214 20:13:49.177"/>
 </kw>
 <kw name="Então deve ser apresentada a mensagem de sucesso" library="kws_web">
 <arg>${DATA.MESSAGES.MESSAGE_SUCCESS}</arg>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220214 19:44:01.919" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-44.png"&gt;&lt;img src="selenium-screenshot-44.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220214 19:44:01.641" endtime="20220214 19:44:01.919"/>
+<msg timestamp="20220214 20:13:49.322" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220214 20:13:49.180" endtime="20220214 20:13:49.322"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath=//*[contains(text(), '${MENSAGEM}')]</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220214 19:44:01.919" endtime="20220214 19:44:01.983"/>
+<status status="PASS" starttime="20220214 20:13:49.322" endtime="20220214 20:13:49.356"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${DATA.REGISTER.NOME}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220214 19:44:01.983" endtime="20220214 19:44:02.019"/>
+<status status="PASS" starttime="20220214 20:13:49.356" endtime="20220214 20:13:49.372"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${DATA.REGISTER.ULT_NOME}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220214 19:44:02.020" endtime="20220214 19:44:02.052"/>
+<status status="PASS" starttime="20220214 20:13:49.372" endtime="20220214 20:13:49.388"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${DATA.REGISTER.EMAIL}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220214 19:44:02.052" endtime="20220214 19:44:02.101"/>
+<status status="PASS" starttime="20220214 20:13:49.389" endtime="20220214 20:13:49.405"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${DATA.REGISTER.ENDERECO}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220214 19:44:02.101" endtime="20220214 19:44:02.126"/>
+<status status="PASS" starttime="20220214 20:13:49.405" endtime="20220214 20:13:49.422"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${DATA.REGISTER.UNIVERSIDADE}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220214 19:44:02.126" endtime="20220214 19:44:02.151"/>
+<status status="PASS" starttime="20220214 20:13:49.422" endtime="20220214 20:13:49.439"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${DATA.REGISTER.PROFISSAO}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220214 19:44:02.152" endtime="20220214 19:44:02.171"/>
+<status status="PASS" starttime="20220214 20:13:49.439" endtime="20220214 20:13:49.454"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${DATA.REGISTER.GENERO}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220214 19:44:02.171" endtime="20220214 19:44:02.191"/>
+<status status="PASS" starttime="20220214 20:13:49.454" endtime="20220214 20:13:49.470"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
 <arg>${DATA.REGISTER.IDADE}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20220214 19:44:02.191" endtime="20220214 19:44:02.209"/>
+<status status="PASS" starttime="20220214 20:13:49.470" endtime="20220214 20:13:49.487"/>
 </kw>
-<status status="PASS" starttime="20220214 19:44:01.639" endtime="20220214 19:44:02.210"/>
+<status status="PASS" starttime="20220214 20:13:49.178" endtime="20220214 20:13:49.487"/>
 </kw>
 <tag>BDD</tag>
-<status status="PASS" starttime="20220214 19:43:56.461" endtime="20220214 19:44:02.210"/>
+<status status="PASS" starttime="20220214 20:13:46.066" endtime="20220214 20:13:49.488"/>
 </test>
 <kw name="Fechar navegador" library="hooks" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20220214 19:44:02.440" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-45.png"&gt;&lt;img src="selenium-screenshot-45.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20220214 19:44:02.215" endtime="20220214 19:44:02.440"/>
+<msg timestamp="20220214 20:13:49.631" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220214 20:13:49.491" endtime="20220214 20:13:49.632"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220214 19:44:02.440" endtime="20220214 19:44:04.668"/>
+<status status="PASS" starttime="20220214 20:13:49.632" endtime="20220214 20:13:52.917"/>
 </kw>
-<status status="PASS" starttime="20220214 19:44:02.214" endtime="20220214 19:44:04.668"/>
+<status status="PASS" starttime="20220214 20:13:49.490" endtime="20220214 20:13:52.918"/>
 </kw>
 <doc>Aqui estarão presentes todos os testes automatizados do módulo de automação WEB.</doc>
-<status status="PASS" starttime="20220214 19:43:45.198" endtime="20220214 19:44:04.668"/>
+<status status="PASS" starttime="20220214 20:13:41.548" endtime="20220214 20:13:52.918"/>
 </suite>
 <statistics>
 <total>

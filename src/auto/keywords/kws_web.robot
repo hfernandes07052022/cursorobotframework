@@ -10,19 +10,19 @@ Dado que o cliente esteja na tela de cadastro
     Capture Page Screenshot
 
 E preencher todos os campos
-    Input Text        id=user_name            ${DATA.REGISTER.NOME}
-    Input Text        id=user_lastname        ${DATA.REGISTER.ULT_NOME}
-    Input Text        id=user_email           ${DATA.REGISTER.EMAIL}
-    Input Text        id=user_address         ${DATA.REGISTER.ENDERECO}
+    Input Text        ${CADASTRO_PAGE.INPUT_USERNAME}            ${DATA.REGISTER.NOME}
+    Input Text        ${CADASTRO_PAGE.INPUT_LASTNAME}        ${DATA.REGISTER.ULT_NOME}
+    Input Text        ${CADASTRO_PAGE.INPUT_EMAIL}           ${DATA.REGISTER.EMAIL}
+    Input Text        ${CADASTRO_PAGE.INPUT_ADDRESS}         ${DATA.REGISTER.ENDERECO}
     Capture Page Screenshot    
-    Input Text        id=user_university      ${DATA.REGISTER.UNIVERSIDADE}
-    Input Text        id=user_profile         ${DATA.REGISTER.PROFISSAO}
-    Input Text        id=user_gender          ${DATA.REGISTER.GENERO}
-    Input Text        id=user_age             ${DATA.REGISTER.IDADE}
+    Input Text        ${CADASTRO_PAGE.INPUT_UNIVERSITY}      ${DATA.REGISTER.UNIVERSIDADE}
+    Input Text        ${CADASTRO_PAGE.INPUT_PROFILE}         ${DATA.REGISTER.PROFISSAO}
+    Input Text        ${CADASTRO_PAGE.INPUT_GENDER}          ${DATA.REGISTER.GENERO}
+    Input Text        ${CADASTRO_PAGE.INPUT_AGE}             ${DATA.REGISTER.IDADE}
     Capture Page Screenshot
 
 Quando clicar em Criar
-    Click Element     xpath=//input[@value='Criar']
+    Click Element     ${CADASTRO_PAGE.BTN_CRIAR}
 
 Então deve ser apresentada a mensagem de sucesso
     [Arguments]            ${MENSAGEM}
@@ -65,4 +65,7 @@ Então deve ser apresentada a mensagem
     IF     '${ERRO}'=='Name translation missing: pt-BR.activerecord.errors.models.user.attributes.name.blank'
             Clear Element Text    id=user_email
     END
+
+    Select From List By Value    id=days        12
+    Select From List By Label    id=months      January 
     
