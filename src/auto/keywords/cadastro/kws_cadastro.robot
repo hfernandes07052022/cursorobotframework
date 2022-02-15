@@ -57,7 +57,7 @@ Quando clicar em salvar
         Click Element                 ${ACCOUNT_PAGE.BTN_SUBMIT}
     ELSE
         Wait Until Page Contains      Welcome to your account. Here you can manage all of your personal information and orders.
-    END    
+    END
 
 Então cadastro deve ser concluído com sucesso
     [Arguments]                        ${MENSAGEM}
