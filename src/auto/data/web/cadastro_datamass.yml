@@ -1,0 +1,5 @@
+CADASTRO:
+  MESSAGES:
+    TITLEPAGE: Login - My Store
+    SUCESSO: Welcome to your account. Here you can manage all of your personal information and orders. 
+    CREATE_ACCOUNT_MSG: Please enter your email address to create an account.

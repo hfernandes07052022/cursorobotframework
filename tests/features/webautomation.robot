@@ -23,7 +23,14 @@ Cenario: Criar usuário com sucesso usando BDD
     Dado que o cliente esteja na tela de cadastro
     E preencher todos os campos
     Quando clicar em Criar
-    Então deve ser apresentada a mensagem "Usuário Criado com sucesso"
+    Então deve ser apresentada a mensagem de sucesso     ${DATA.MESSAGES.MESSAGE_SUCCESS}
+
+Cenario: Criando um usuario com sucesso no site automationpractice
+    [Tags]            CADASTRO
+    Dado que o cliente esteja na tela de cadastro do site
+    E preencher com todos os dados
+    Quando clicar em salvar
+    Então cadastro deve ser concluído com sucesso        ${CADASTRO.MESSAGES.SUCESSO}
 
 Cenario: Criar usuario sem informar o nome
     [Tags]        NOME
