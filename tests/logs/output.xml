@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <robot generator="Robot 4.1 (Python 3.8.0 on win32)" generated="20220131 19:50:31.643" rpa="false" schemaversion="2">
 <suite id="s1" name="Webautomation" source="C:\Users\User\Desktop\Curso Robot basico\tests\features\webautomation.robot">
@@ -6,10 +7,15 @@
 <robot generator="Robot 4.1 (Python 3.8.0 on win32)" generated="20220215 20:38:13.026" rpa="false" schemaversion="2">
 <suite id="s1" name="Webautomation" source="C:\Users\User\Desktop\cursorobotframework\tests\features\webautomation.robot">
 >>>>>>> Stashed changes
+=======
+<robot generator="Robot 4.1 (Python 3.8.0 on win32)" generated="20220214 20:13:41.546" rpa="false" schemaversion="2">
+<suite id="s1" name="Webautomation" source="C:\Users\User\Desktop\cursorobotframework\tests\features\webautomation.robot">
+>>>>>>> 7c2e3d36395997dcedcfa23a785001360821533f
 <kw name="Abrir navegador" library="hooks" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>about:blank</arg>
 <arg>${CONFIG.WEB.BROWSER_NAME}</arg>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <msg timestamp="20220131 19:50:31.838" level="FAIL">Resolving variable '${CONFIG.WEB.BROWSER_NAME}' failed: Variable '${CONFIG}' not found.</msg>
@@ -19,10 +25,16 @@
 <msg timestamp="20220215 20:38:13.971" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
 <status status="PASS" starttime="20220215 20:38:13.969" endtime="20220215 20:38:15.418"/>
 >>>>>>> Stashed changes
+=======
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220214 20:13:41.897" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220214 20:13:41.896" endtime="20220214 20:13:43.462"/>
+>>>>>>> 7c2e3d36395997dcedcfa23a785001360821533f
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${CONFIG.WEB.BASE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <status status="NOT RUN" starttime="20220131 19:50:31.838" endtime="20220131 19:50:31.839"/>
 </kw>
@@ -37,17 +49,181 @@
 <doc>Maximizes current browser window.</doc>
 <status status="PASS" starttime="20220215 20:38:18.852" endtime="20220215 20:38:18.984"/>
 >>>>>>> Stashed changes
+=======
+<msg timestamp="20220214 20:13:43.464" level="INFO">Opening url 'https://automacaocombatista.herokuapp.com/users/new'</msg>
+<status status="PASS" starttime="20220214 20:13:43.463" endtime="20220214 20:13:46.053"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220214 20:13:46.053" endtime="20220214 20:13:46.063"/>
+>>>>>>> 7c2e3d36395997dcedcfa23a785001360821533f
 </kw>
 <kw name="Set Selenium Timeout" library="SeleniumLibrary">
 <arg>${CONFIG.WEB.IMPLICITY_WAIT}</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <status status="NOT RUN" starttime="20220131 19:50:31.839" endtime="20220131 19:50:31.839"/>
+=======
+<status status="PASS" starttime="20220214 20:13:46.064" endtime="20220214 20:13:46.066"/>
+>>>>>>> 7c2e3d36395997dcedcfa23a785001360821533f
 </kw>
-<status status="FAIL" starttime="20220131 19:50:31.836" endtime="20220131 19:50:31.839"/>
+<status status="PASS" starttime="20220214 20:13:41.895" endtime="20220214 20:13:46.066"/>
 </kw>
 <test id="s1-t1" name="Cenario: Criar usuário com sucesso usando BDD">
+<kw name="Dado que o cliente esteja na tela de cadastro" library="kws_web">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Automação com Batista</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20220214 20:13:46.078" level="INFO">Page title is 'Automação com Batista'.</msg>
+<status status="PASS" starttime="20220214 20:13:46.068" endtime="20220214 20:13:46.078"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), 'Novo Usuário!!')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220214 20:13:46.078" endtime="20220214 20:13:46.123"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220214 20:13:46.305" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220214 20:13:46.123" endtime="20220214 20:13:46.305"/>
+</kw>
+<status status="PASS" starttime="20220214 20:13:46.068" endtime="20220214 20:13:46.305"/>
+</kw>
+<kw name="E preencher todos os campos" library="kws_web">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO_PAGE.INPUT_USERNAME}</arg>
+<arg>${DATA.REGISTER.NOME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220214 20:13:46.310" level="INFO">Typing text 'Helder' into text field 'user_name'.</msg>
+<status status="PASS" starttime="20220214 20:13:46.307" endtime="20220214 20:13:46.456"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO_PAGE.INPUT_LASTNAME}</arg>
+<arg>${DATA.REGISTER.ULT_NOME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220214 20:13:46.459" level="INFO">Typing text 'Fernandes' into text field 'user_lastname'.</msg>
+<status status="PASS" starttime="20220214 20:13:46.456" endtime="20220214 20:13:46.608"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO_PAGE.INPUT_EMAIL}</arg>
+<arg>${DATA.REGISTER.EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220214 20:13:46.610" level="INFO">Typing text 'helder.teste@robot.com' into text field 'user_email'.</msg>
+<status status="PASS" starttime="20220214 20:13:46.608" endtime="20220214 20:13:46.776"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO_PAGE.INPUT_ADDRESS}</arg>
+<arg>${DATA.REGISTER.ENDERECO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220214 20:13:46.778" level="INFO">Typing text 'Rua aprendendo automação' into text field 'user_address'.</msg>
+<status status="PASS" starttime="20220214 20:13:46.777" endtime="20220214 20:13:46.943"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220214 20:13:47.193" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220214 20:13:46.943" endtime="20220214 20:13:47.193"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO_PAGE.INPUT_UNIVERSITY}</arg>
+<arg>${DATA.REGISTER.UNIVERSIDADE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220214 20:13:47.194" level="INFO">Typing text 'FATEC' into text field 'user_university'.</msg>
+<status status="PASS" starttime="20220214 20:13:47.193" endtime="20220214 20:13:47.329"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO_PAGE.INPUT_PROFILE}</arg>
+<arg>${DATA.REGISTER.PROFISSAO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220214 20:13:47.330" level="INFO">Typing text 'Tech Lead' into text field 'user_profile'.</msg>
+<status status="PASS" starttime="20220214 20:13:47.329" endtime="20220214 20:13:47.477"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO_PAGE.INPUT_GENDER}</arg>
+<arg>${DATA.REGISTER.GENERO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220214 20:13:47.479" level="INFO">Typing text 'Masculino' into text field 'user_gender'.</msg>
+<status status="PASS" starttime="20220214 20:13:47.477" endtime="20220214 20:13:47.619"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CADASTRO_PAGE.INPUT_AGE}</arg>
+<arg>${DATA.REGISTER.IDADE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220214 20:13:47.622" level="INFO">Typing text '37' into text field 'user_age'.</msg>
+<status status="PASS" starttime="20220214 20:13:47.620" endtime="20220214 20:13:47.753"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220214 20:13:48.008" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220214 20:13:47.753" endtime="20220214 20:13:48.009"/>
+</kw>
+<status status="PASS" starttime="20220214 20:13:46.306" endtime="20220214 20:13:48.009"/>
+</kw>
+<kw name="Quando clicar em Criar" library="kws_web">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CADASTRO_PAGE.BTN_CRIAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220214 20:13:48.011" level="INFO">Clicking element '//input[@value='Criar']'.</msg>
+<status status="PASS" starttime="20220214 20:13:48.010" endtime="20220214 20:13:49.177"/>
+</kw>
+<status status="PASS" starttime="20220214 20:13:48.010" endtime="20220214 20:13:49.177"/>
+</kw>
+<kw name="Então deve ser apresentada a mensagem de sucesso" library="kws_web">
+<arg>${DATA.MESSAGES.MESSAGE_SUCCESS}</arg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220214 20:13:49.322" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220214 20:13:49.180" endtime="20220214 20:13:49.322"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[contains(text(), '${MENSAGEM}')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220214 20:13:49.322" endtime="20220214 20:13:49.356"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${DATA.REGISTER.NOME}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220214 20:13:49.356" endtime="20220214 20:13:49.372"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${DATA.REGISTER.ULT_NOME}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220214 20:13:49.372" endtime="20220214 20:13:49.388"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${DATA.REGISTER.EMAIL}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220214 20:13:49.389" endtime="20220214 20:13:49.405"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${DATA.REGISTER.ENDERECO}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220214 20:13:49.405" endtime="20220214 20:13:49.422"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${DATA.REGISTER.UNIVERSIDADE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220214 20:13:49.422" endtime="20220214 20:13:49.439"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${DATA.REGISTER.PROFISSAO}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220214 20:13:49.439" endtime="20220214 20:13:49.454"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${DATA.REGISTER.GENERO}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220214 20:13:49.454" endtime="20220214 20:13:49.470"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${DATA.REGISTER.IDADE}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220214 20:13:49.470" endtime="20220214 20:13:49.487"/>
+</kw>
+<status status="PASS" starttime="20220214 20:13:49.178" endtime="20220214 20:13:49.487"/>
+</kw>
 <tag>BDD</tag>
+<<<<<<< HEAD
 <status status="FAIL" starttime="20220131 19:50:31.839" endtime="20220131 19:50:31.840">Parent suite setup failed:
 Resolving variable '${CONFIG.WEB.BROWSER_NAME}' failed: Variable '${CONFIG}' not found.</status>
 =======
@@ -320,21 +496,30 @@ DPO AE 49328' into text field '//input[@id='address1']'.</msg>
 <tag>CADASTRO</tag>
 <status status="PASS" starttime="20220215 20:38:18.987" endtime="20220215 20:38:28.060"/>
 >>>>>>> Stashed changes
+=======
+<status status="PASS" starttime="20220214 20:13:46.066" endtime="20220214 20:13:49.488"/>
+>>>>>>> 7c2e3d36395997dcedcfa23a785001360821533f
 </test>
 <kw name="Fechar navegador" library="hooks" type="TEARDOWN">
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <msg timestamp="20220131 19:50:31.844" level="INFO">Cannot capture screenshot because no browser is open.</msg>
 <status status="PASS" starttime="20220131 19:50:31.843" endtime="20220131 19:50:31.844"/>
+=======
+<msg timestamp="20220214 20:13:49.631" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220214 20:13:49.491" endtime="20220214 20:13:49.632"/>
+>>>>>>> 7c2e3d36395997dcedcfa23a785001360821533f
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220131 19:50:31.844" endtime="20220131 19:50:31.844"/>
+<status status="PASS" starttime="20220214 20:13:49.632" endtime="20220214 20:13:52.917"/>
 </kw>
-<status status="PASS" starttime="20220131 19:50:31.843" endtime="20220131 19:50:31.845"/>
+<status status="PASS" starttime="20220214 20:13:49.490" endtime="20220214 20:13:52.918"/>
 </kw>
 <doc>Aqui estarão presentes todos os testes automatizados do módulo de automação WEB.</doc>
+<<<<<<< HEAD
 <status status="FAIL" starttime="20220131 19:50:31.645" endtime="20220131 19:50:31.845">Suite setup failed:
 Resolving variable '${CONFIG.WEB.BROWSER_NAME}' failed: Variable '${CONFIG}' not found.</status>
 =======
@@ -350,23 +535,29 @@ Resolving variable '${CONFIG.WEB.BROWSER_NAME}' failed: Variable '${CONFIG}' not
 <doc>Aqui estarão presentes todos os testes automatizados do módulo de automação WEB.</doc>
 <status status="PASS" starttime="20220215 20:38:13.027" endtime="20220215 20:38:30.587"/>
 >>>>>>> Stashed changes
+=======
+<status status="PASS" starttime="20220214 20:13:41.548" endtime="20220214 20:13:52.918"/>
+>>>>>>> 7c2e3d36395997dcedcfa23a785001360821533f
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <stat pass="0" fail="1" skip="0">BDD</stat>
 =======
 <stat pass="1" fail="0" skip="0">CADASTRO</stat>
 >>>>>>> Stashed changes
+=======
+<stat pass="1" fail="0" skip="0">BDD</stat>
+>>>>>>> 7c2e3d36395997dcedcfa23a785001360821533f
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Webautomation">Webautomation</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Webautomation">Webautomation</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20220131 19:50:31.832" level="ERROR">Error in file 'C:\Users\User\Desktop\Curso Robot basico\src\config\package.robot' on line 19: Invalid resource file extension '.yaml'. Supported extensions are '.resource', '.robot', '.txt', '.tsv', '.rst' and '.rest'.</msg>
 </errors>
 </robot>

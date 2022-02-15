@@ -33,3 +33,4 @@ Variables       ../auto/data/web/datamass_register.yml
 Variables       ../auto/data/api/datamass_api.yml
 Variables       ../auto/data/web/cadastro_datamass.yml
 Variables       hooks.yml
+Variables       hooks.yml

@@ -6,16 +6,6 @@ Resource             ../../src/config/package.robot
 Suite Setup            Abrir navegador
 Suite Teardown         Fechar navegador
 
-*** Variables ***
-&{NOVO_USUARIO}
-...        nome=Helder
-...        ult_nome=Fernandes
-...        email=helder.teste@robot.com
-...        endereco=Rua aprendendo automação
-...        universidade=FATEC
-...        profissao=Tech Lead
-...        genero=Masculino
-...        idade=27
 
 *** Test Cases ***
 Cenario: Criar usuário com sucesso usando BDD
@@ -45,3 +35,4 @@ Cenario: Criar usuario sem informar o email
     E preencher todos os campos exceto o campo email
     Quando clicar em Criar
     Então deve ser apresentada a mensagem     Email translation missing: pt-BR.activerecord.errors.models.user.attributes.email.invalid
+
